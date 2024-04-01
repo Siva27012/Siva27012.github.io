@@ -55,6 +55,8 @@ document.addEventListener('visibilitychange',
     });
 
 
+
+
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
     strings: ["frontend development", "web designing", "Data Science", "web development", "Cloud Computing"],
@@ -65,7 +67,18 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 200,
+//     reset: true
+});
 
+sr.reveal('.home, .about,.heading,.work,.experience,.contact',{}); 
+sr.reveal('.content,.socials,.container',{delay: 400}); 
+sr.reveal('.home__social-icon, ',{ interval: 200}); 
+sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
